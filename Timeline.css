@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+  font-family: "Open Sans";
+  color: #FFFFFF;
+}
+
+.head {
+display: flex;
+justify-content: center;
+background: #F9F9F9;
+}
+
+.heading {
+  width: 100%;
+  height: auto;
+  color: #8B231C;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 91px;
+}
+
+.line{
+  width: 436.5px;
+  margin-top: 2rem;
+  align-items: center;
+  border: 4px solid #f9a628;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F9F9F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  position: relative;
+}
+.timeline {
+  height: auto;
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color:rgba(181, 81, 31, 1);
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  align-items: center;
+}
+.timeline-content .date {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  margin-top: -1rem;
+}
+
+@media (max-width: 1440px) and  (min-width: 768px)  {
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 84%;
+    background-color: rgba(254, 155, 7, 1);
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: left;
+    clear: right;
+    box-shadow: 8px 4px 4px rgba(228, 235, 245, 0.25);
+    transform: translateX(-90px);
+    border-radius: 0px 27.2632px 0px 40px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: right;
+    clear: left;
+    box-shadow: 8px 4px 4px rgba(228, 235, 245, 0.25);
+    transform: translateX(50px);
+    border-radius: 0px 27.2632px 0px 40px;;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border:3px solid rgba(254, 155, 7, 1);
+    background-color: rgba(181, 81, 31, 1);
+    top: 0px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -10px;
+    color: rgba(181, 81, 31, 1);
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (max-width: 767px) and  (min-width: 320px) {
+
+  .timeline {
+    left: 50px;
+    width: 300px;
+  }
+  
+  .main {
+    width: 100%;
+    height: auto;
+  }
+
+  .timeline:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 4px;
+      height: 100%;
+      background-color: rgba(254, 155, 7, 1);
+    }
+
+    .timeline ul li {
+      width: 80%;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .timeline ul li:nth-child(even) {
+      box-shadow: 8px 4px 4px rgba(228, 235, 245, 0.25);
+      transform: translateX(30px);
+      left: -4rem;
+      border-radius: 0px 20px 0px 20px;
+    }
+    .timeline ul li:nth-child(odd) {
+      box-shadow: 8px 4px 4px rgba(228, 235, 245, 0.25);
+      transform: translateX(30px);
+      left: -4rem;
+      border-radius: 0px 20px 0px 20px;
+    }
+    
+    .timeline ul li::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      border:3px solid rgba(254, 155, 7, 1);
+      background-color: rgba(181, 81, 31, 1);
+      top: -6px;
+    }
+
+    .timeline ul li:nth-child(even)::before {
+      transform: translate(50%, -50%);
+      left: -60px;
+    }
+
+    .timeline ul li:nth-child(odd)::before {
+      transform: translate(50%, -50%);
+      left: -60px;
+    }
+
+    .line{
+      width: 354px;
+      margin-top: 2rem;
+      align-items: center;
+      border: 4px solid #f9a628;
+    }
+
+    .timeline-content .date {
+      position: absolute;
+      top: -10px;
+      color: rgba(181, 81, 31, 1);
+      font-weight: 700;
+      font-family: "Open Sans";
+      
+    }
+} 
+
